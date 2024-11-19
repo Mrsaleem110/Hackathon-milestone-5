@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic/editable/shareable Resume Builder</title>
+    <title>Shareable/Editable/Downloadable Resume Builder</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Dynamic Resume Builder</h1>
+    <h1>Shareable/Editable/Downloadable Resume Builder</h1>
     <form id="resume-form">
         <fieldset>
             <legend>Personal Information</legend>
-
-             <label for="objective">Objective:</label>
+             <label for="Profilepicture">ProfilePic</label>
+             <input type="file" id="Profilepicture" placeholder="Add ProfilePic" accept="image/*" >
+             <br><br>
              <textarea id="objective" placeholder="Enter your Objective" rows="3" required></textarea>
              <br><br>
+             <label for="username">UserName:</label>
+             <input type="text" id="username" placeholder="Enter your UserName" required>
+             <br> <br> 
              <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Enter your Name" required>
             <br> <br>
@@ -30,7 +34,7 @@
             <input type="number" id="cnic" placeholder="Enter your Cnic Number" required>
             <br><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your Email" required>
+            <input type="email" id="email" placeholder="Enter your Email(if u have)" >
             <br> <br>
             <label for="address">Address:</label>
             <textarea id="address" placeholder="Enter your Objective" rows="4" required></textarea>
@@ -38,7 +42,7 @@
   
         </fieldset>
         <fieldset>
-            <legend>Education</legend>
+            <legend>Qualification</legend>
             <select aria-label="State" id="education">
                 <OPTION>Select</OPTION><BR>
                 <OPTION>MIDDLE</OPTION><BR>
@@ -51,6 +55,8 @@
                 <OPTION>PHD</OPTION><BR>
             </select>
             <BR><BR>
+            <label for="Qualification">Qualification Field:</label>
+            <textarea id="Qualification" placeholder="Qualification Field" rows="1" required></textarea>
         </fieldset>
         <fieldset>
             <legend>Experience</legend>
@@ -58,24 +64,24 @@
         </fieldset>
         <fieldset>
             <legend>Skills</legend>
-            <textarea id="skills" placeholder="Enter your Skills" rows="4" required></textarea>
+            <textarea id="skills" placeholder="Enter your Skills" rows="5" required></textarea>
         </fieldset>
         <br>
        <button type="submit"><b>GENERATE RESUME</b></button>
     </form>
-     <br>
-     <div id="resume-display" contenteditable="true">
-     </div>
+     
      <br>
 
-     
-      <div id="shareable-link-container" style="display: none;">
-        <h2>Shareable link</h2>
-        <p>Here is your unique link to view or edit your resume:</p>
-        <a href="#" id="shareable-link" target="_blank"></a>
-        <br>
-        <button id="download-pdf"><b>Download as PDF</b></button>
+     <div id="resume-display" contenteditable="true">
+        HERE IS YOUR RESUME
       </div>
+      <br>
+<div id="shareable-link-container"style="display: none;">
+
+<a href="#" id="shareable-link" target="_blank"><h2>Shareable Link</h2></a>
+<br>
+<button id="download-pdf"><b>Download as PDF</b></button>
+</div>
      <script src="script.js"></script>
 </body>
 
